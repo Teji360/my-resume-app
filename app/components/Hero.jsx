@@ -10,6 +10,7 @@ const Hero = () => {
   const myRef = useRef(null);
 
   useEffect(() => {
+    //TODO When you enable toggle day and night make sure the changes reflct here.
     if (typeof window !== "undefined") {
       // Dynamically load Three.js from the CDN
       const script = document.createElement("script");
@@ -30,7 +31,7 @@ const Hero = () => {
                 minWidth: 200.0,
                 scale: 1.0,
                 scaleMobile: 1.0,
-                color: 0xB3A369, // Customize the dot color (green)
+                color: 0xffffff, //0xB3A369, // Customize the dot color (green)
                 color2: 0xffffff,
                 backgroundColor: 0x000000, // Customize background color (black)
               })
