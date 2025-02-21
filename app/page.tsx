@@ -7,20 +7,20 @@ import Projects from "./components/Projects";
 
 export default function Home() {
   return (
-    <div className="bg-black">
-      <section id="hero">
+    <div className="bg-black h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden">
+      <section id="hero" className="snap snap-center">
         <Hero />
       </section>
 
-      <section id="education">
+      <section id="education" className="snap snap-center h-screen">
         <Education />
       </section>
 
-      <section id="work">
+      <section id="work" className="snap snap-center h-screen">
         <Work />
       </section>
 
-      <section id="projects">
+      <section id="projects" className="snap snap-center h-screen">
         <Projects />
       </section>
       

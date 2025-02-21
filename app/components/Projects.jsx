@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link";
 
 
-const Work = () => {
+const Projects = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
 
@@ -18,11 +18,11 @@ const Work = () => {
       script.onload = () => {
         // Dynamically load Vanta.js from the CDN
         const vantaScript = document.createElement("script");
-        vantaScript.src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"; // Load Vanta.js Dots Effect
+        vantaScript.src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"; // Load Vanta.js Dots Effect
         vantaScript.onload = () => {
           if (!vantaEffect) {
             setVantaEffect(
-              window.VANTA.GLOBE({
+              window.VANTA.NET({
                 el: myRef.current, // Apply the effect to the referenced element
                 mouseControls: true,
                 touchControls: true,
@@ -31,9 +31,9 @@ const Work = () => {
                 minWidth: 200.0,
                 scale: 1.0,
                 scaleMobile: 1.0,
-                color: 0x000000, //0xB3A369, // Customize the dot color (green)
+                color: 0xffffff, //0xB3A369, // Customize the dot color (green)
                 color2: 0xffffff,
-                backgroundColor: 0xffffff, // Customize background color (black)
+                backgroundColor: 0x000000, // Customize background color (black)
               })
             );
           }
@@ -70,4 +70,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;

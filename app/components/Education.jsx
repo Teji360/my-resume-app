@@ -1,16 +1,12 @@
-"use client"; // Ensure it runs only on the client side
+"use client"
 
-import { useEffect, useState, useRef } from "react";
-import { Button } from "@/components/ui/button"
-import Link from "next/link";
+import { useEffect, useState, useRef } from "react"
 
-
-const Work = () => {
+const Education = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
 
   useEffect(() => {
-    //TODO When you enable toggle day and night make sure the changes reflct here.
     if (typeof window !== "undefined") {
       // Dynamically load Three.js from the CDN
       const script = document.createElement("script");
@@ -18,11 +14,11 @@ const Work = () => {
       script.onload = () => {
         // Dynamically load Vanta.js from the CDN
         const vantaScript = document.createElement("script");
-        vantaScript.src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"; // Load Vanta.js Dots Effect
+        vantaScript.src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"; // Load Vanta.js Trunk Effect
         vantaScript.onload = () => {
           if (!vantaEffect) {
             setVantaEffect(
-              window.VANTA.GLOBE({
+              window.VANTA.WAVES({
                 el: myRef.current, // Apply the effect to the referenced element
                 mouseControls: true,
                 touchControls: true,
@@ -31,9 +27,9 @@ const Work = () => {
                 minWidth: 200.0,
                 scale: 1.0,
                 scaleMobile: 1.0,
-                color: 0x000000, //0xB3A369, // Customize the dot color (green)
+                color: 0x000000, // Customize the trunk color (white)
                 color2: 0xffffff,
-                backgroundColor: 0xffffff, // Customize background color (black)
+                backgroundColor: 0x000000, // Customize background color (black)
               })
             );
           }
@@ -51,23 +47,34 @@ const Work = () => {
   return (
     <div
       ref={myRef} // Reference element to apply the effect
-      className="h-screen w-screen flex flex-col space-y-5 items-center justify-center text-white"
+      className="h-screen w-screen flex flex-col p-2 text-white dark:text-black space-y-10"
     >
-      <p>
-        Google
-      </p>
+      <div className="space-y-5 text-xl">
+        <p>
+          I attend <span className="text-[#B3A369]">Georgia Institute of Technology College of Computing. 🐝</span>
+        </p>
 
-      <p>
-        Incoming Google ML
-      </p>
+        <p>
+          Interested in Machine Learning, Software Engineering, and Quantitative Trading
+        </p>
+      </div>
 
-      <p>
-        Quantitative Analyst
-      </p>
-        
-   
+      <div>
+        <h1 className="text-2xl">Clubs</h1>
+        <p>
+          Trading at Georgia Tech (TGT)
+        </p>
+
+        <p>
+          Artificial Intelligence At Georgia Tech (AI@GT)
+        </p>
+
+        <p>
+          Black Student Coding Organization (BSCO)
+        </p>
+      </div>
     </div>
   );
 };
 
-export default Work;
+export default Education;
