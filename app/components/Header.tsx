@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Header = () => {
     return (
-        <header className="flex flex-row justify-evenly w-full p-5">
+        <header className="flex flex-row justify-evenly w-screen h-20 p-5">
 
             <div className="flex w-[50vh] justify-between">
 

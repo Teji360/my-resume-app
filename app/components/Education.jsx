@@ -47,7 +47,7 @@ const Education = () => {
   return (
     <div
       ref={myRef} // Reference element to apply the effect
-      className="h-screen w-screen flex flex-col p-2 text-white dark:text-black space-y-10"
+      className="h-screen w-screen flex flex-col text-white dark:text-black"
     >
       <div className="space-y-5 text-xl">
         <p>

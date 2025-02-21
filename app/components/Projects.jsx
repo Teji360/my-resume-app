@@ -51,7 +51,7 @@ const Projects = () => {
   return (
     <div
       ref={myRef} // Reference element to apply the effect
-      className="h-screen w-screen flex flex-col space-y-5 items-center justify-center text-white"
+      className="h-screen w-screen flex flex-col items-center justify-center text-white"
     >
       <p>
         Google

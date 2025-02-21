@@ -12,15 +12,15 @@ export default function Home() {
         <Hero />
       </section>
 
-      <section id="education" className="snap snap-center h-screen">
+      <section id="education" className="snap snap-center">
         <Education />
       </section>
 
-      <section id="work" className="snap snap-center h-screen">
+      <section id="work" className="snap snap-center">
         <Work />
       </section>
 
-      <section id="projects" className="snap snap-center h-screen">
+      <section id="projects" className="snap snap-center">
         <Projects />
       </section>
       
